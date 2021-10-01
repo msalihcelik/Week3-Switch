@@ -16,17 +16,12 @@ class ViewController: UIViewController {
         
         modeSwitch.isOn = true
     }
-
+    
     @IBAction func modeSwitchTapped(_ sender: Any) {
-        
         if modeSwitch.isOn == true {
-                    modeBackground.backgroundColor = .darkGray
-                } else {
-                    modeBackground.backgroundColor = .lightGray
-                }
-        
+            modeBackground.backgroundColor = .darkGray
+        } else {
+            modeBackground.backgroundColor = .lightGray
+        }
     }
-    
-    
 }
-
