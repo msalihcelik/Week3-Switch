@@ -8,12 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var modeBackground: UIImageView!
+    @IBOutlet weak var modeSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
 
-
+    @IBAction func modeSwitchTapped(_ sender: Any) {
+        
+        
+        
+    }
+    
+    
 }
 

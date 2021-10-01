@@ -17,23 +17,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N5S-8w-elG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wWg-Mn-rqo">
-                                <rect key="frame" x="20" y="76" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wWg-Mn-rqo">
+                                <rect key="frame" x="44" y="74" width="51" height="31"/>
+                                <connections>
+                                    <action selector="modeSwitchTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZIT-QJ-R7P"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="N5S-8w-elG" secondAttribute="bottom" id="9hA-4a-STq"/>
                             <constraint firstItem="N5S-8w-elG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GZs-OZ-32P"/>
+                            <constraint firstItem="wWg-Mn-rqo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.2" id="Nx7-PG-M65"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N5S-8w-elG" secondAttribute="bottom" id="W8l-wa-kz6"/>
+                            <constraint firstItem="wWg-Mn-rqo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.33" id="cvi-wf-v2k"/>
+                            <constraint firstAttribute="trailing" secondItem="N5S-8w-elG" secondAttribute="trailing" id="k2n-gs-Fj3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N5S-8w-elG" secondAttribute="trailing" id="nYx-gP-QDh"/>
+                            <constraint firstItem="N5S-8w-elG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ngF-GL-jo9"/>
+                            <constraint firstItem="N5S-8w-elG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pGt-nc-iy5"/>
                             <constraint firstItem="N5S-8w-elG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wuP-hn-m0V"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="modeBackground" destination="N5S-8w-elG" id="grD-Bs-H8L"/>
+                        <outlet property="modeSwitch" destination="wWg-Mn-rqo" id="pkg-ZQ-Uk0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
