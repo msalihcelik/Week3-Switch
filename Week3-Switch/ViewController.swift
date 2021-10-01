@@ -8,12 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var modeBackground: UIImageView!
+    @IBOutlet weak var modeSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        modeSwitch.isOn = true
     }
-
-
+    
+    @IBAction func modeSwitchTapped(_ sender: Any) {
+        if modeSwitch.isOn == true {
+            modeBackground.backgroundColor = .darkGray
+        } else {
+            modeBackground.backgroundColor = .lightGray
+        }
+    }
 }
-
