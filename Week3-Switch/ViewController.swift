@@ -14,12 +14,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        modeSwitch.isOn = true
     }
 
     @IBAction func modeSwitchTapped(_ sender: Any) {
         
-        
+        if modeSwitch.isOn == true {
+                    modeBackground.backgroundColor = .darkGray
+                } else {
+                    modeBackground.backgroundColor = .lightGray
+                }
         
     }
     
